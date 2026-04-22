@@ -1,5 +1,5 @@
 import './App.css'
-import { Sidebar, RightSidebar } from './components'
+import { Sidebar, RightSidebar, Story, Post1, Post2, Post3, Post4, Post5, Post6, Post7, Post8, Post9, Post10 } from './components'
 
 function App() {
 
@@ -7,7 +7,17 @@ function App() {
     <div className="app">
       <Sidebar />
       <main className="main-content">
-        <h1>Gramora Feed</h1>
+        <Story />
+        <Post1 />
+        <Post2 />
+        <Post3 />
+        <Post4 />
+        <Post5 />
+        <Post6 />
+        <Post7 />
+        <Post8 />
+        <Post9 />
+        <Post10 />
       </main>
       <RightSidebar />
     </div>

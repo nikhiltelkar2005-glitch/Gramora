@@ -42,7 +42,7 @@ const Sidebar = () => {
     <aside className="sidebar">
       <div className="sidebar-logo">
         <InstagramLogo />
-        <span className="logo-text">Gramoga</span>
+        <span className="logo-text">Gramora</span>
       </div>
 
       <nav className="nav-items">

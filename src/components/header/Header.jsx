@@ -7,10 +7,10 @@ import {
   Film, 
   MessageCircle, 
   Heart, 
-  PlusSquare, 
+  SquarePlus, 
   User, 
-  Menu, 
-  Instagram,
+  Menu,  
+  Camera, 
   AtSign
 } from 'lucide-react';
 
@@ -18,7 +18,8 @@ const Header = () => {
   return (
     <nav className="headerSidebar">
       <div className="headerLogo">
-        <Instagram size={28} />
+        <Camera size={28} />
+        <span className="logoText">Gramoga</span>
       </div>
       
       <ul className="headerNavLinks">
@@ -44,11 +45,10 @@ const Header = () => {
         </li>
         <li className="navItem notificationItem">
           <Heart size={24} />
-          <span className="notificationBadge">2</span>
           <span className="navLabel">Notifications</span>
         </li>
         <li className="navItem">
-          <PlusSquare size={24} />
+          <SquarePlus size={24} />
           <span className="navLabel">Create</span>
         </li>
         <li className="navItem">

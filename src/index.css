@@ -1,0 +1,27 @@
+
+.blank-avatar {
+  background-color: #262626;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.sidebar .blank-avatar {
+  width: 24px;
+  height: 24px;
+}
+
+.right-sidebar .user-avatar.blank-avatar {
+  width: 44px;
+  height: 44px;
+}
+
+.right-sidebar .suggestion-avatar.blank-avatar {
+  width: 32px;
+  height: 32px;
+}
+
+.message-bar-avatar.blank-avatar {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #262626;
+}

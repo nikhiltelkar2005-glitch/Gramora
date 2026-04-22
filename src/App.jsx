@@ -1,14 +1,15 @@
 import './App.css'
-import { Header } from './components'
+import { Sidebar, RightSidebar } from './components'
 
 function App() {
 
   return (
     <div className="app">
-      <Header />
+      <Sidebar />
       <main className="main-content">
-        {/* Your main content goes here */}
+        <h1>Gramora Feed</h1>
       </main>
+      <RightSidebar />
     </div>
   )
 }

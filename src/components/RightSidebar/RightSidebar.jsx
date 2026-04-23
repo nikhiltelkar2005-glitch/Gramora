@@ -32,8 +32,6 @@ const RightSidebar = () => {
 
   return (
     <aside className="right-sidebar">
-  return (
-    <aside className="right-sidebar">
       <div className="user-section">
         <div className="user-info">
           <div className="user-avatar blank-avatar"></div>
@@ -72,7 +70,7 @@ const RightSidebar = () => {
           ))}
         </div>
         <div className="copyright">
-          © 2026 GRAMOGA FROM META
+          © 2026 GRAMORA FROM META
         </div>
       </div>
 
@@ -88,8 +86,6 @@ const RightSidebar = () => {
           <div className="message-bar-avatar blank-avatar"></div>
         </div>
       </div>
-    </aside>
-  );
     </aside>
   );
 };

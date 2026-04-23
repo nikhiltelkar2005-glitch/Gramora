@@ -1,3 +1,14 @@
 export { default as Header } from './header/Header';
 export { default as Sidebar } from './Sidebar/Sidebar';
 export { default as RightSidebar } from './RightSidebar/RightSidebar';
+export { default as Story } from './Story/Story';
+export { default as Post1 } from './Post1/Post1';
+export { default as Post2 } from './Post2/Post2';
+export { default as Post3 } from './Post3/Post3';
+export { default as Post4 } from './Post4/Post4';
+export { default as Post5 } from './Post5/Post5';
+export { default as Post6 } from './Post6/Post6';
+export { default as Post7 } from './Post7/Post7';
+export { default as Post8 } from './Post8/Post8';
+export { default as Post9 } from './Post9/Post9';
+export { default as Post10 } from './Post10/Post10';

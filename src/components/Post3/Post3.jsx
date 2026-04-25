@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { HeartIcon, HeartFilledIcon, CommentIcon, ShareIcon, SaveIcon, SaveFilledIcon, MoreIcon } from '../Icons';
 import './Post3.css';
 
@@ -20,9 +21,9 @@ function Post3() {
     <div className="post">
       <div className="post-header">
         <div className="post-user-info">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
+          <img src="https://i.pravatar.cc/150?u=hana_tokyo" className="post-avatar" alt="user" />
           <div className="post-text-info">
-            <span className="post-username">hana_tokyo</span>
+            <Link to={`/profile/hana_tokyo`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">hana_tokyo</span></Link>
             <span className="post-location">Shibuya</span>
           </div>
         </div>
@@ -43,7 +44,7 @@ function Post3() {
       </div>
       <div className="post-likes">{likes.toLocaleString()} likes</div>
       <div className="post-caption">
-        <span className="caption-username">hana_tokyo</span>Neon lights and city nights. 🌃
+        <Link to={`/profile/hana_tokyo`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">hana_tokyo</span></Link>Neon lights and city nights. 🌃
       </div>
     </div>
   );

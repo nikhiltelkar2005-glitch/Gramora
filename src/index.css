@@ -10,14 +10,18 @@
   height: 24px;
 }
 
-.right-sidebar .user-avatar.blank-avatar {
+.right-sidebar .user-avatar {
   width: 44px;
   height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.right-sidebar .suggestion-avatar.blank-avatar {
+.right-sidebar .suggestion-avatar {
   width: 32px;
   height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .message-bar-avatar.blank-avatar {

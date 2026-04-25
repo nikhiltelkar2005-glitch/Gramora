@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { HeartIcon, HeartFilledIcon, CommentIcon, ShareIcon, SaveIcon, SaveFilledIcon, MoreIcon } from '../Icons';
 import './Post1.css';
 
@@ -22,7 +23,7 @@ function Post1() {
         <div className="post-user-info">
           <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
           <div className="post-text-info">
-            <span className="post-username">alex_rivers</span>
+            <Link to={`/profile/alex_rivers`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">alex_rivers</span></Link>
             <span className="post-location">Swiss Alps</span>
           </div>
         </div>
@@ -48,7 +49,7 @@ function Post1() {
 
       <div className="post-likes">{likes.toLocaleString()} likes</div>
       <div className="post-caption">
-        <span className="caption-username">alex_rivers</span>
+        <Link to={`/profile/alex_rivers`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">alex_rivers</span></Link>
         Finding peace in the heart of the mountains. 🏔️
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { HeartIcon, HeartFilledIcon, CommentIcon, ShareIcon, SaveIcon, SaveFilledIcon, MoreIcon } from '../Icons';
 import './Post7.css';
 
@@ -20,9 +21,9 @@ function Post7() {
     <div className="post">
       <div className="post-header">
         <div className="post-user-info">
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
+          <img src="https://i.pravatar.cc/150?u=urban_hype" className="post-avatar" alt="user" />
           <div className="post-text-info">
-            <span className="post-username">urban_hype</span>
+            <Link to={`/profile/urban_hype`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">urban_hype</span></Link>
             <span className="post-location">NYC</span>
           </div>
         </div>
@@ -43,7 +44,7 @@ function Post7() {
       </div>
       <div className="post-likes">{likes.toLocaleString()} likes</div>
       <div className="post-caption">
-        <span className="caption-username">urban_hype</span>Concrete jungle.
+        <Link to={`/profile/urban_hype`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">urban_hype</span></Link>Concrete jungle.
       </div>
     </div>
   );

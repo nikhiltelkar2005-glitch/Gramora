@@ -26,11 +26,12 @@
   gap: 12px;
 }
 
-.user-avatar.blank-avatar {
+.user-avatar {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, #262626 0%, #1a1a1a 100%);
   border-radius: 50%;
+  object-fit: cover;
+  background: linear-gradient(135deg, #262626 0%, #1a1a1a 100%);
 }
 
 .user-details {
@@ -117,11 +118,12 @@
   gap: 12px;
 }
 
-.suggestion-avatar.blank-avatar {
+.suggestion-avatar {
   width: 32px;
   height: 32px;
-  background: linear-gradient(135deg, #262626 0%, #1a1a1a 100%);
   border-radius: 50%;
+  object-fit: cover;
+  background: linear-gradient(135deg, #262626 0%, #1a1a1a 100%);
 }
 
 .suggestion-details {

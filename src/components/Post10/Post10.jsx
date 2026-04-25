@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { HeartIcon, HeartFilledIcon, CommentIcon, ShareIcon, SaveIcon, SaveFilledIcon, MoreIcon } from '../Icons';
 import './Post10.css';
 
@@ -20,9 +21,9 @@ function Post10() {
     <div className="post">
       <div className="post-header">
         <div className="post-user-info">
-          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
+          <img src="https://i.pravatar.cc/150?u=tech_guru" className="post-avatar" alt="user" />
           <div className="post-text-info">
-            <span className="post-username">tech_guru</span>
+            <Link to={`/profile/tech_guru`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">tech_guru</span></Link>
             <span className="post-location">Silicon Valley</span>
           </div>
         </div>
@@ -43,7 +44,7 @@ function Post10() {
       </div>
       <div className="post-likes">{likes.toLocaleString()} likes</div>
       <div className="post-caption">
-        <span className="caption-username">tech_guru</span>New setup complete. 💻
+        <Link to={`/profile/tech_guru`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">tech_guru</span></Link>New setup complete. 💻
       </div>
     </div>
   );

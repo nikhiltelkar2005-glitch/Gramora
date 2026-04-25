@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MessageCircle } from 'lucide-react';
 import './RightSidebar.css';
 
@@ -7,22 +8,27 @@ const RightSidebar = () => {
     {
       username: 'alex_smith',
       fullname: 'Followed by jessica_lee',
+      profilePic: 'https://i.pravatar.cc/150?u=alex',
     },
     {
       username: 'maya_designer',
       fullname: 'Suggested for you',
+      profilePic: 'https://i.pravatar.cc/150?u=maya',
     },
     {
       username: 'tech_guy',
       fullname: 'Followed by dev_community',
+      profilePic: 'https://i.pravatar.cc/150?u=tech',
     },
     {
       username: 'nature_pics',
       fullname: 'Followed by photography_world',
+      profilePic: 'https://i.pravatar.cc/150?u=nature',
     },
     {
       username: 'fitness_pro',
       fullname: 'Followed by healthy_living',
+      profilePic: 'https://i.pravatar.cc/150?u=fitness',
     },
   ];
 
@@ -34,9 +40,11 @@ const RightSidebar = () => {
     <aside className="right-sidebar">
       <div className="user-section">
         <div className="user-info">
-          <div className="user-avatar blank-avatar"></div>
+          <img src="https://i.pravatar.cc/150?u=nikhil" className="user-avatar" alt="user" />
           <div className="user-details">
-            <span className="username">nikhil_telkar</span>
+            <Link to="/profile/nikhil_telkar" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <span className="username">nikhil_telkar</span>
+            </Link>
             <span className="fullname">Nikhil.Telkar.03</span>
           </div>
         </div>
@@ -52,9 +60,11 @@ const RightSidebar = () => {
         {suggestions.map((user, index) => (
           <div key={index} className="suggestion-item">
             <div className="suggestion-info">
-              <div className="suggestion-avatar blank-avatar"></div>
+              <img src={user.profilePic} className="suggestion-avatar" alt={user.username} />
               <div className="suggestion-details">
-                <span className="suggestion-username">{user.username}</span>
+                <Link to={`/profile/${user.username}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <span className="suggestion-username">{user.username}</span>
+                </Link>
                 <span className="suggestion-meta">{user.fullname}</span>
               </div>
             </div>

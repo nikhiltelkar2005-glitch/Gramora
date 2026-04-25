@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { HeartIcon, HeartFilledIcon, CommentIcon, ShareIcon, SaveIcon, SaveFilledIcon, MoreIcon } from '../Icons';
 import './Post9.css';
 
@@ -20,9 +21,9 @@ function Post9() {
     <div className="post">
       <div className="post-header">
         <div className="post-user-info">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
+          <img src="https://i.pravatar.cc/150?u=foodie_jay" className="post-avatar" alt="user" />
           <div className="post-text-info">
-            <span className="post-username">foodie_jay</span>
+            <Link to={`/profile/foodie_jay`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">foodie_jay</span></Link>
             <span className="post-location">Rome</span>
           </div>
         </div>
@@ -43,7 +44,7 @@ function Post9() {
       </div>
       <div className="post-likes">{likes.toLocaleString()} likes</div>
       <div className="post-caption">
-        <span className="caption-username">foodie_jay</span>Best pasta ever. 🍝
+        <Link to={`/profile/foodie_jay`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">foodie_jay</span></Link>Best pasta ever. 🍝
       </div>
     </div>
   );

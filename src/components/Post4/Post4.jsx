@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { HeartIcon, HeartFilledIcon, CommentIcon, ShareIcon, SaveIcon, SaveFilledIcon, MoreIcon } from '../Icons';
 import './Post4.css';
 
@@ -20,9 +21,9 @@ function Post4() {
     <div className="post">
       <div className="post-header">
         <div className="post-user-info">
-          <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
+          <img src="https://i.pravatar.cc/150?u=mountain.ben" className="post-avatar" alt="user" />
           <div className="post-text-info">
-            <span className="post-username">mountain.ben</span>
+            <Link to={`/profile/mountain.ben`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">mountain.ben</span></Link>
             <span className="post-location">Rocky Mountains</span>
           </div>
         </div>
@@ -43,7 +44,7 @@ function Post4() {
       </div>
       <div className="post-likes">{likes.toLocaleString()} likes</div>
       <div className="post-caption">
-        <span className="caption-username">mountain.ben</span>Woke up to this view.
+        <Link to={`/profile/mountain.ben`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">mountain.ben</span></Link>Woke up to this view.
       </div>
     </div>
   );

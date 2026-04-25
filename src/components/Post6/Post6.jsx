@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { HeartIcon, HeartFilledIcon, CommentIcon, ShareIcon, SaveIcon, SaveFilledIcon, MoreIcon } from '../Icons';
 import './Post6.css';
 
@@ -20,9 +21,9 @@ function Post6() {
     <div className="post">
       <div className="post-header">
         <div className="post-user-info">
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
+          <img src="https://i.pravatar.cc/150?u=traveler_sam" className="post-avatar" alt="user" />
           <div className="post-text-info">
-            <span className="post-username">traveler_sam</span>
+            <Link to={`/profile/traveler_sam`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">traveler_sam</span></Link>
             <span className="post-location">Santorini</span>
           </div>
         </div>
@@ -43,7 +44,7 @@ function Post6() {
       </div>
       <div className="post-likes">{likes.toLocaleString()} likes</div>
       <div className="post-caption">
-        <span className="caption-username">traveler_sam</span>Blue domes and endless horizons.
+        <Link to={`/profile/traveler_sam`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">traveler_sam</span></Link>Blue domes and endless horizons.
       </div>
     </div>
   );

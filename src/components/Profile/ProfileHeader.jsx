@@ -2,7 +2,7 @@ import React from 'react';
 import { Settings, MoreHorizontal } from 'lucide-react';
 import './ProfileHeader.css';
 
-const ProfileHeader = ({ user }) => {
+const ProfileHeader = ({ user, onMessageClick }) => {
   if (!user) return null;
 
   return (
@@ -21,7 +21,7 @@ const ProfileHeader = ({ user }) => {
           </h2>
           <div className="profile-actions">
             <button className="btn-follow">Follow</button>
-            <button className="btn-message">Message</button>
+            <button className="btn-message" onClick={() => onMessageClick && onMessageClick(user)}>Message</button>
           </div>
           <button className="btn-icon">
             <Settings size={20} />

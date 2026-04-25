@@ -12,3 +12,5 @@ export { default as Post7 } from './Post7/Post7';
 export { default as Post8 } from './Post8/Post8';
 export { default as Post9 } from './Post9/Post9';
 export { default as Post10 } from './Post10/Post10';
+export { default as CreatePostModal } from './CreatePost/CreatePostModal';
+export { default as PostCard } from './PostCard/PostCard';

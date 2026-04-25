@@ -21,9 +21,9 @@ function Post4() {
     <div className="post">
       <div className="post-header">
         <div className="post-user-info">
-          <img src="https://i.pravatar.cc/150?u=mountain.ben" className="post-avatar" alt="user" />
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
           <div className="post-text-info">
-            <Link to={`/profile/mountain.ben`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">mountain.ben</span></Link>
+            <Link to={`/profile/arjun_deshmukh`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">arjun_deshmukh</span></Link>
             <span className="post-location">Rocky Mountains</span>
           </div>
         </div>
@@ -44,7 +44,7 @@ function Post4() {
       </div>
       <div className="post-likes">{likes.toLocaleString()} likes</div>
       <div className="post-caption">
-        <Link to={`/profile/mountain.ben`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">mountain.ben</span></Link>Woke up to this view.
+        <Link to={`/profile/arjun_deshmukh`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">arjun_deshmukh</span></Link>Woke up to this view.
       </div>
     </div>
   );

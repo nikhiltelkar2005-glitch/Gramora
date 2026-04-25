@@ -1,9 +1,13 @@
 .stories-section {
   display: flex;
   overflow-x: auto;
-  padding: 16px 0;
+  padding: 16px 8px;
   margin-bottom: 24px;
   scrollbar-width: none;
+  background-color: #000;
+  max-width: 470px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .stories-section::-webkit-scrollbar {
@@ -14,7 +18,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 16px;
+  margin-right: 12px;
   cursor: pointer;
   min-width: 74px;
 }
@@ -24,7 +28,7 @@
   height: 66px;
   border-radius: 50%;
   padding: 2px;
-  background: var(--story-gradient);
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,8 +39,9 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 2px solid var(--bg-color);
+  border: 2px solid #000;
   overflow: hidden;
+  background: #1a1a1a;
 }
 
 .story-image-container img {
@@ -46,10 +51,11 @@
 }
 
 .story-name {
-  font-size: 0.75rem;
-  color: var(--text-primary);
+  font-size: 12px;
+  color: #fff;
   max-width: 74px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  text-align: center;
 }

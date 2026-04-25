@@ -1,24 +1,16 @@
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
-import { Sidebar, RightSidebar, Story, Post1, Post2, Post3, Post4, Post5, Post6, Post7, Post8, Post9, Post10 } from './components'
+import { Sidebar, RightSidebar } from './components'
+import Home from './pages/Home'
 
 function App() {
 
   return (
     <div className="app">
       <Sidebar />
-      <main className="main-content">
-        <Story />
-        <Post1 />
-        <Post2 />
-        <Post3 />
-        <Post4 />
-        <Post5 />
-        <Post6 />
-        <Post7 />
-        <Post8 />
-        <Post9 />
-        <Post10 />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
       <RightSidebar />
     </div>
   )

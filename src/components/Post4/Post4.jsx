@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HeartIcon, HeartFilledIcon, CommentIcon, ShareIcon, SaveIcon, SaveFilledIcon, MoreIcon } from '../Icons';
+import Comments from '../Comments/Comments';
 import './Post4.css';
 
 function Post4() {
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [showComments, setShowComments] = useState(false);
   const [likes, setLikes] = useState(2405);
 
   const handleLike = () => {
@@ -35,7 +37,7 @@ function Post4() {
       <div className="post-actions">
         <div className="actions-left">
           <button className="action-btn" onClick={handleLike}>{liked ? <HeartFilledIcon /> : <HeartIcon />}</button>
-          <button className="action-btn"><CommentIcon /></button>
+          <button className="action-btn" onClick={() => setShowComments(!showComments)}><CommentIcon /></button>
           <button className="action-btn"><ShareIcon /></button>
         </div>
         <button className="action-btn" onClick={() => setSaved(!saved)}>
@@ -46,7 +48,9 @@ function Post4() {
       <div className="post-caption">
         <Link to={`/profile/arjun_deshmukh`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">arjun_deshmukh</span></Link>Woke up to this view.
       </div>
+      {showComments && <Comments initialComments={[{ id: 1, user: 'tech_guru', text: 'Great photo!' }]} />}
     </div>
   );
 }
+
 export default Post4;

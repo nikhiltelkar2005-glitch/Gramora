@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HeartIcon, HeartFilledIcon, CommentIcon, ShareIcon, SaveIcon, SaveFilledIcon, MoreIcon } from '../Icons';
+import Comments from '../Comments/Comments';
 import './Post6.css';
 
 function Post6() {
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [showComments, setShowComments] = useState(false);
   const [likes, setLikes] = useState(9500);
 
   const handleLike = () => {
@@ -35,7 +37,7 @@ function Post6() {
       <div className="post-actions">
         <div className="actions-left">
           <button className="action-btn" onClick={handleLike}>{liked ? <HeartFilledIcon /> : <HeartIcon />}</button>
-          <button className="action-btn"><CommentIcon /></button>
+          <button className="action-btn" onClick={() => setShowComments(!showComments)}><CommentIcon /></button>
           <button className="action-btn"><ShareIcon /></button>
         </div>
         <button className="action-btn" onClick={() => setSaved(!saved)}>
@@ -46,7 +48,9 @@ function Post6() {
       <div className="post-caption">
         <Link to={`/profile/vikram_rathore`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">vikram_rathore</span></Link>Blue domes and endless horizons.
       </div>
+      {showComments && <Comments initialComments={[{ id: 1, user: 'zoya_fashion', text: 'So aesthetic!' }]} />}
     </div>
   );
 }
+
 export default Post6;

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HeartIcon, HeartFilledIcon, CommentIcon, ShareIcon, SaveIcon, SaveFilledIcon, MoreIcon } from '../Icons';
+import Comments from '../Comments/Comments';
 import './Post1.css';
 
 function Post1() {
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [showComments, setShowComments] = useState(false);
   const [likes, setLikes] = useState(12842);
 
   const handleLike = () => {
@@ -39,7 +41,7 @@ function Post1() {
           <button className="action-btn" onClick={handleLike}>
             {liked ? <HeartFilledIcon /> : <HeartIcon />}
           </button>
-          <button className="action-btn"><CommentIcon /></button>
+          <button className="action-btn" onClick={() => setShowComments(!showComments)}><CommentIcon /></button>
           <button className="action-btn"><ShareIcon /></button>
         </div>
         <button className="action-btn" onClick={() => setSaved(!saved)}>
@@ -52,6 +54,7 @@ function Post1() {
         <Link to={`/profile/aryan_sharma`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">aryan_sharma</span></Link>
         Finding peace in the heart of the mountains. 🏔️
       </div>
+      {showComments && <Comments initialComments={[{ id: 1, user: 'sneha_kapoor', text: 'Beautiful view!' }]} />}
     </div>
   );
 }

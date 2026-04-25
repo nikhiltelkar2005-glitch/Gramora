@@ -21,10 +21,10 @@ function Post1() {
     <div className="post">
       <div className="post-header">
         <div className="post-user-info">
-          <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
           <div className="post-text-info">
-            <Link to={`/profile/alex_rivers`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">alex_rivers</span></Link>
-            <span className="post-location">Swiss Alps</span>
+            <Link to={`/profile/aryan_sharma`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">aryan_sharma</span></Link>
+            <span className="post-location">Manali, Himachal Pradesh</span>
           </div>
         </div>
         <MoreIcon />
@@ -49,7 +49,7 @@ function Post1() {
 
       <div className="post-likes">{likes.toLocaleString()} likes</div>
       <div className="post-caption">
-        <Link to={`/profile/alex_rivers`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">alex_rivers</span></Link>
+        <Link to={`/profile/aryan_sharma`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">aryan_sharma</span></Link>
         Finding peace in the heart of the mountains. 🏔️
       </div>
     </div>

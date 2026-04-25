@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { 
   Home, 
   Search, 
@@ -8,23 +9,23 @@ import {
   Heart, 
   SquarePlus, 
   Menu,
-  LayoutGrid,
-  Camera
+  LayoutGrid
 } from 'lucide-react';
 import './Sidebar.css';
 
-const Sidebar = () => {
-  const [activeItem, setActiveItem] = useState('Profile');
+const Sidebar = ({ onOpenMessages, onOpenCreate }) => {
+  const [activeItem, setActiveItem] = useState('Home');
+  const navigate = useNavigate();
 
   const navItems = [
-    { name: 'Home', icon: <Home className="nav-icon" />, badge: null },
-    { name: 'Reels', icon: <Film className="nav-icon" />, badge: null },
-    { name: 'Messages', icon: <MessageCircle className="nav-icon" />, badge: null },
-    { name: 'Search', icon: <Search className="nav-icon" />, badge: null },
-    { name: 'Explore', icon: <Compass className="nav-icon" />, badge: null },
-    { name: 'Notifications', icon: <Heart className="nav-icon" />, badge: null },
-    { name: 'Create', icon: <SquarePlus className="nav-icon" />, badge: null },
-    { name: 'Profile', icon: <div className="profile-avatar blank-avatar"></div>, badge: null },
+    { name: 'Home', icon: <Home className="nav-icon" />, path: '/' },
+    { name: 'Reels', icon: <Film className="nav-icon" />, path: '/reels' },
+    { name: 'Messages', icon: <MessageCircle className="nav-icon" />, path: null },
+    { name: 'Search', icon: <Search className="nav-icon" />, path: null },
+    { name: 'Explore', icon: <Compass className="nav-icon" />, path: '/explore' },
+    { name: 'Notifications', icon: <Heart className="nav-icon" />, path: null },
+    { name: 'Create', icon: <SquarePlus className="nav-icon" />, path: null },
+    { name: 'Profile', icon: <div className="profile-avatar blank-avatar"></div>, path: '/profile/nikhil_telkar' },
   ];
 
   const bottomItems = [
@@ -40,7 +41,7 @@ const Sidebar = () => {
 
   return (
     <aside className="sidebar">
-      <div className="sidebar-logo">
+      <div className="sidebar-logo" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
         <InstagramLogo />
         <span className="logo-text">Gramora</span>
       </div>
@@ -51,11 +52,21 @@ const Sidebar = () => {
             key={item.name} 
             className={`nav-item ${activeItem === item.name ? 'active' : ''}`}
             data-name={item.name}
-            onClick={() => setActiveItem(item.name)}
+            onClick={() => {
+              setActiveItem(item.name);
+              if (item.path) {
+                navigate(item.path);
+              }
+              if (item.name === 'Messages' && onOpenMessages) {
+                onOpenMessages();
+              }
+              if (item.name === 'Create' && onOpenCreate) {
+                onOpenCreate();
+              }
+            }}
           >
             <div className="nav-icon-container">
               {item.icon}
-              {item.badge && <span className="badge">{item.badge}</span>}
             </div>
             <span className="nav-text">{item.name}</span>
           </div>

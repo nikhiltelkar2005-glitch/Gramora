@@ -21,7 +21,7 @@ function Post8() {
     <div className="post">
       <div className="post-header">
         <div className="post-user-info">
-          <img src="https://i.pravatar.cc/150?u=nina.sky" className="post-avatar" alt="user" />
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
           <div className="post-text-info">
             <Link to={`/profile/nina.sky`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">nina.sky</span></Link>
             <span className="post-location">Sky Garden</span>

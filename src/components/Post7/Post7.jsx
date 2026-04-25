@@ -21,9 +21,9 @@ function Post7() {
     <div className="post">
       <div className="post-header">
         <div className="post-user-info">
-          <img src="https://i.pravatar.cc/150?u=urban_hype" className="post-avatar" alt="user" />
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
           <div className="post-text-info">
-            <Link to={`/profile/urban_hype`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">urban_hype</span></Link>
+            <Link to={`/profile/zoya_fashion`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">zoya_fashion</span></Link>
             <span className="post-location">NYC</span>
           </div>
         </div>
@@ -44,7 +44,7 @@ function Post7() {
       </div>
       <div className="post-likes">{likes.toLocaleString()} likes</div>
       <div className="post-caption">
-        <Link to={`/profile/urban_hype`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">urban_hype</span></Link>Concrete jungle.
+        <Link to={`/profile/zoya_fashion`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}><span className="caption-username">zoya_fashion</span></Link>Concrete jungle.
       </div>
     </div>
   );

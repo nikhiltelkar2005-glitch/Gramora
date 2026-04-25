@@ -69,7 +69,7 @@ Make sure you have Node.js and npm (or yarn) installed on your machine.
    ```
 
 4. **View the app:**
-   Open [http://localhost:5173](https://gramora.vercel.app/) in your browser.
+   Open (https://gramora.vercel.app/) in your browser.
 
 ## 🎨 Design & UI Highlights
 Gramora places a heavy emphasis on UI/UX, avoiding simple generic colors in favor of:

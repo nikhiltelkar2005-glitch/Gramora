@@ -21,7 +21,7 @@ function Post2() {
     <div className="post">
       <div className="post-header">
         <div className="post-user-info">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
+          <img src="https://i.pravatar.cc/150?u=kavya_creatives" className="post-avatar" alt="user" />
           <div className="post-text-info">
             <Link to={`/profile/kavya_creatives`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">kavya_creatives</span></Link>
             <span className="post-location">Berlin</span>

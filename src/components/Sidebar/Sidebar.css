@@ -122,10 +122,14 @@
   border: 2px solid #000000;
 }
 
-.profile-avatar.blank-avatar {
+.profile-avatar {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-avatar.blank-avatar {
   background: linear-gradient(135deg, #262626 0%, #1a1a1a 100%);
 }
 

@@ -20,11 +20,11 @@ body {
 }
 
 .main-content {
-  margin-left: 245px;
-  margin-right: 320px;
   width: 100%;
   max-width: 630px;
-  padding: 44px 0; /* Increased top padding */
+  margin-right: 128px;
+  padding: 44px 0;
+  /* Increased top padding */
   background-color: #000000;
   display: flex;
   flex-direction: column;
@@ -42,10 +42,11 @@ body {
 
 .feed-container {
   width: 100%;
-  max-width: 470px;
+  max-width: 630px;
   display: flex;
   flex-direction: column;
-  gap: 16px; /* Space between posts */
+  gap: 16px;
+  /* Space between posts */
   margin-top: 12px;
 }
 
@@ -75,20 +76,19 @@ body {
 
 @media (max-width: 1264px) {
   .main-content {
-    margin-right: 0;
     max-width: 600px;
   }
 }
 
 @media (max-width: 1160px) {
   .main-content {
-    margin-left: 72px;
   }
 }
 
 @media (max-width: 768px) {
   .main-content {
     margin-left: 0;
+    margin-right: 0;
     margin-bottom: 48px;
     padding: 24px 16px;
     max-width: 100%;

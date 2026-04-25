@@ -21,7 +21,7 @@ function Post6() {
     <div className="post">
       <div className="post-header">
         <div className="post-user-info">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
+          <img src="https://i.pravatar.cc/150?u=vikram_rathore" className="post-avatar" alt="user" />
           <div className="post-text-info">
             <Link to={`/profile/vikram_rathore`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">vikram_rathore</span></Link>
             <span className="post-location">Santorini</span>

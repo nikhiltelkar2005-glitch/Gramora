@@ -1,14 +1,21 @@
 import React from 'react';
-import { Story, PostCard } from '../components';
+import { Story, Post1, Post2, Post3, Post4, Post5, Post6, Post7, Post8, Post9, Post10 } from '../components';
 
 const Home = ({ posts }) => {
   return (
     <main className="main-content">
       <Story />
       <div className="feed-container">
-        {posts.map(post => (
-          <PostCard key={post.id} post={post} />
-        ))}
+        <Post1 />
+        <Post2 />
+        <Post3 />
+        <Post4 />
+        <Post5 />
+        <Post6 />
+        <Post7 />
+        <Post8 />
+        <Post9 />
+        <Post10 />
       </div>
     </main>
   );

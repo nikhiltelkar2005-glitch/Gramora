@@ -21,7 +21,7 @@ function Post3() {
     <div className="post">
       <div className="post-header">
         <div className="post-user-info">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200" className="post-avatar" alt="user" />
+          <img src="https://i.pravatar.cc/150?u=sneha_kapoor" className="post-avatar" alt="user" />
           <div className="post-text-info">
             <Link to={`/profile/sneha_kapoor`} style={{ textDecoration: 'none', color: 'inherit' }}><span className="post-username">sneha_kapoor</span></Link>
             <span className="post-location">Marine Drive, Mumbai</span>

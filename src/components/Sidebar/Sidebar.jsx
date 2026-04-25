@@ -25,7 +25,7 @@ const Sidebar = ({ onOpenMessages, onOpenCreate }) => {
     { name: 'Explore', icon: <Compass className="nav-icon" />, path: '/explore' },
     { name: 'Notifications', icon: <Heart className="nav-icon" />, path: null },
     { name: 'Create', icon: <SquarePlus className="nav-icon" />, path: null },
-    { name: 'Profile', icon: <div className="profile-avatar blank-avatar"></div>, path: '/profile/nikhil_telkar' },
+    { name: 'Profile', icon: <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" className="profile-avatar" alt="Profile" />, path: '/profile/nikhil_telkar' },
   ];
 
   const bottomItems = [
